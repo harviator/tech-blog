@@ -1,0 +1,17 @@
+[
+    {
+        "title": "JavaScript",
+        "content": "JavaScript is the language of the internet.",
+        "user_id": "1"
+    },
+    {
+        "title": "HTML",
+        "content": "HTML is a markup language.",
+        "user_id": "2"
+    },
+    {
+        "title": "mySQL",
+        "content": "mySQL is a database enivornment.",
+        "user_id": "3"
+    }
+]
