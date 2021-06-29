@@ -1,0 +1,18 @@
+[
+    {
+        "content": "Good job Ironman, but I'm still richer than you.",
+        "user_id": "3",
+        "post_id": "1"
+
+    },
+    {
+        "content": "Pick a real language to write about.",
+        "user_id": "1",
+        "post_id": "2"
+    },
+    {
+        "content": "What's mySQL?",
+        "user_id": "2",
+        "post_id": "3"
+    }
+]

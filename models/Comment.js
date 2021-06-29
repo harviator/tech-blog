@@ -14,6 +14,7 @@ Comment.init(
     date: {
         type: DataTypes.DATEONLY,
         allowNull: false,
+        defaultValue: DataTypes.NOW
     },
     content: {
         type: DataTypes.TEXT,
