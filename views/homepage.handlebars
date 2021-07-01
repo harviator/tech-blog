@@ -5,4 +5,9 @@
 <div>
     {{!-- need an each loop for the all the posts --}}
     {{#each posts as |post|}}
+        <h3>{{post.title}}</h3>
+        <h5>{{post.user.username}}</h5>
+        <p>{{post.content}}</p>
+        <p>{{post.date}}</p>
+    {{/each}}
 </div>
