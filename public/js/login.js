@@ -1,5 +1,5 @@
-document.querySelector('#login-form').addEventListener('submit', function(event) {
-    
+document.querySelector('.form-signin').addEventListener('submit', function (event) {
+
     event.preventDefault();
 
     const username = document.querySelector('#username-login').value
@@ -12,11 +12,9 @@ document.querySelector('#login-form').addEventListener('submit', function(event)
         },
         body: JSON.stringify({
             username: username,
-            password:password
+            password: password
         })
     })
-
-    
 
     console.log('This is the login!')
 });

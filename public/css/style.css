@@ -68,3 +68,24 @@ h1 {
 .card-header > h5, p {
     margin: 0px;
 }
+
+.form-signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 50px 10px 50px;
+    color: var(--celadon-blue);
+}
+
+.btn {
+    color: var(--platinum);
+    border-color: var(--red-salsa);
+    background-color: var(--celadon-blue);
+}
+
+.btn:hover {
+    color: var(--red-salsa);
+    border-color: var(--red-salsa);
+}

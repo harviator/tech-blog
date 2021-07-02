@@ -1,29 +1,16 @@
-{{!-- <div>
-    <h2>Login</h2>
-    <form action="/api/users/login" method="post">
-        <label for="username">username:</label>
-        <input class="username" type="text" id="username-login" name="username">
-
-        <label for="password">password:</label>
-        <input class="password" type="password" id="password-login" name="password">
-
-        <button class="button" type="submit">login</button>
+<div class="form-signin">
+    <form>
+        <h2 class="h3 mb-3 fw-normal">Please Login</h2>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="username-login" placeholder="Username">
+            <label for="username">Username</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="password-login" placeholder="Password">
+            <label for="password">Password</label>
+        </div>
+        <button class="w-100 mt-2 btn btn-lg btn-outline" type="submit">Login</button>
     </form>
-
-</div> --}}
-
-<div>
-    <h2>Login</h2>
-    <form id="login-form">
-        <label for="username">username:</label>
-        <input class="username" type="text" id="username-login" >
-
-        <label for="password">password:</label>
-        <input class="password" type="password" id="password-login">
-
-        <button class="button" type="submit">login</button>
-    </form>
-
 </div>
 
-<script src="/js/login.js"></script>
+<script src="./js/login.js"></script>
