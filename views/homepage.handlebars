@@ -1,13 +1,11 @@
-<div>
-    <h1>HOMEPAGE</h1>
-</div>
-
-<div>
-    {{!-- need an each loop for the all the posts --}}
-    {{#each posts as |post|}}
-        <h3>{{post.title}}</h3>
-        <h5>{{post.user.username}}</h5>
+{{#each posts as |post|}}
+<div class="card">
+    <div class="card-header">
+        <h5>{{post.title}}</h5>
+        <p>Posted by {{post.user.username}} on {{post.date}}</p>
+    </div>
+    <div class="card-body">
         <p>{{post.content}}</p>
-        <p>{{post.date}}</p>
-    {{/each}}
+    </div>
 </div>
+{{/each}}

@@ -50,3 +50,21 @@ h1 {
     box-shadow: 10px 10px var(--celadon-blue);
     text-align: center;
 }
+
+.card {
+    margin: 20px;
+    border-color: var(--celadon-blue);
+}
+
+.card-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--platinum);
+    background-color: var(--celadon-blue);
+}
+
+.card-header > h5, p {
+    margin: 0px;
+}
