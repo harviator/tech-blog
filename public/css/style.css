@@ -1,21 +1,23 @@
 :root {
-    --red: #ff0000;
-    --grey: #bfbfbf;
-    --blue: #0000ff;
-    --organge: #ff6600;
+--royal-blue-dark: #0a2463ff;
+--red-salsa: #fb3640ff;
+--davys-grey: #605f5eff;
+--celadon-blue: #247ba0ff;
+--platinum: #e2e2e2ff;
 }
 
 html, body {
     height: 100%;
     margin: 0;
     font-family: 'Quicksand', sans-serif;
-    background-color: var(--grey);
+    background-color: var(--platinum);
 }
 
 header {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    background-color: var(--royal-blue-dark);
 }
 
 nav {
@@ -25,16 +27,26 @@ nav {
 
 nav > a {
     margin: 10px;
-    padding: 20px;
+    padding: 10px;
     text-decoration: none;
+    color: var(--platinum);
+}
+
+nav > a:hover {
+    color: var(--celadon-blue);
+    background-color: var(--platinum);
+    border-radius: 5px;
 }
 
 h1 {
     font-family: 'Tourney', cursive;
-    color: var(--red);
-    margin: 20px;
+    color: var(--red-salsa);
+    background-color: var(--platinum);
+    margin: 0 20px 30px 20px;
     padding: 20px;
-    border: 5px solid var(--red);
+    border: 5px solid var(--red-salsa);
     border-radius: 5px;
     width: 20%;
+    box-shadow: 10px 10px var(--celadon-blue);
+    text-align: center;
 }
