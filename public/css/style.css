@@ -1,0 +1,40 @@
+:root {
+    --red: #ff0000;
+    --grey: #bfbfbf;
+    --blue: #0000ff;
+    --organge: #ff6600;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--grey);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav > a {
+    margin: 10px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Tourney', cursive;
+    color: var(--red);
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid var(--red);
+    border-radius: 5px;
+    width: 20%;
+}
