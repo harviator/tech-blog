@@ -69,7 +69,7 @@ h1 {
     margin: 0px;
 }
 
-.form-signin {
+.form-signin, .form-signup {
     display: flex;
     flex-direction: column;
     justify-content: center;
