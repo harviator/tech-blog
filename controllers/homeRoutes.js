@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 // Get Homepage
 router.get('/', async (req, res) => {
     try {
-        const postData = await Post.findAll({
+        const userPostData = await Post.findAll({
             include: [
                 {
                     model: User,
@@ -14,12 +14,12 @@ router.get('/', async (req, res) => {
             ],
         });
 
-        const posts = postData.map((post) => post.get({ plain: true }));
+        const userPosts = userPostData.map((post) => post.get({ plain: true }));
         
-        console.log(posts);
+        console.log(userPosts);
 
         res.render('homepage', {
-            posts,
+            userPosts,
             logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -30,18 +30,20 @@ router.get('/', async (req, res) => {
 // Get One Post
 
 // Get Dashboard
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/dashboard', async (req, res) => {
     try {
-      const userData = await User.findByPk(req.session.user_id, {
-        attributes: { exclude: ['password'] },
-        include: [{ model: Post }],
-      });
+      const postsData = await Post.findAll({
+        where:{
+          user_id:1//req.session.user_id
+        }
+      })
   
-      const user = userData.get({ plain: true });
-  
+
+      const posts =  postsData.map(post=>post.get({ plain: true }));
+  console.log(posts)
       res.render('dashboard', {
-        ...user,
-        logged_in: true
+        posts,
+        logged_in:true
       });
     } catch (err) {
       res.status(500).json(err);
@@ -61,7 +63,7 @@ router.get('/signup', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/dashboard');
   }
-  
+
     res.render('signup')
 });
 

@@ -38,6 +38,20 @@ nav > a:hover {
     border-radius: 5px;
 }
 
+nav > button {
+    all: unset;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--platinum);
+}
+
+nav > button:hover {
+    color: var(--celadon-blue);
+    background-color: var(--platinum);
+    border-radius: 5px;
+}
+
 h1 {
     font-family: 'Tourney', cursive;
     color: var(--red-salsa);
