@@ -4,51 +4,51 @@ const withAuth = require('../utils/auth');
 
 // Get Homepage
 router.get('/', async (req, res) => {
-    try {
-        const userPostData = await Post.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['username'],
-                },
-            ],
-        });
+  try {
+    const userPostData = await Post.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
 
-        const userPosts = userPostData.map((post) => post.get({ plain: true }));
-        
-        console.log(userPosts);
+    const userPosts = userPostData.map((post) => post.get({ plain: true }));
 
-        res.render('homepage', {
-            userPosts,
-            logged_in: req.session.logged_in
-        });
-    } catch (err) {
-        res.status(500).json(err);
-    }
+    console.log(userPosts);
+
+    res.render('homepage', {
+      userPosts,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // Get One Post
 
-// Get Dashboard
+// Get Dashboard - need with auth
 router.get('/dashboard', async (req, res) => {
-    try {
-      const postsData = await Post.findAll({
-        where:{
-          user_id:1//req.session.user_id
-        }
-      })
-  
+  try {
+    const postsData = await Post.findAll({
+      where: {
+        user_id: 1//req.session.user_id
+      }
+    })
 
-      const posts =  postsData.map(post=>post.get({ plain: true }));
-  console.log(posts)
-      res.render('dashboard', {
-        posts,
-        logged_in:true
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+
+    const posts = postsData.map(post => post.get({ plain: true }));
+    console.log(posts)
+    res.render('dashboard', {
+      posts,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
@@ -56,7 +56,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-    res.render('login')
+  res.render('login')
 });
 
 router.get('/signup', (req, res) => {
@@ -64,7 +64,7 @@ router.get('/signup', (req, res) => {
     res.redirect('/dashboard');
   }
 
-    res.render('signup')
+  res.render('signup')
 });
 
 module.exports = router;
