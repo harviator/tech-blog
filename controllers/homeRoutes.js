@@ -28,6 +28,11 @@ router.get('/', async (req, res) => {
 });
 
 // Get One Post
+//to get the post form when you click the add button
+//one to get the edit form 
+// then in the js files I need to link it to the right postRoutes
+
+
 
 // Get Dashboard - need with auth
 router.get('/dashboard', async (req, res) => {

@@ -105,6 +105,20 @@ h1 {
     border-color: var(--red-salsa);
 }
 
-#new-post-btn {
+#new-post-link {
     margin: 0 20px 0 20px;
+    padding: 10px;
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--platinum);
+    background-color: var(--royal-blue-dark);
+    border-radius: 5px;
+}
+
+#new-post-link:hover {
+    color: var(--celadon-blue);
+    background-color: var(--platinum);
+    border-radius: 5px;
+    border: 1px solid var(--celadon-blue);
 }
