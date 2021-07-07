@@ -20,13 +20,15 @@ router.post('/', async (req, res) => {
 // Put route to update post
 router.put('/:id', async (req, res) => {
     try {
-      const postData = await Post.update({
+      const postData = await Post.update(req.body, {
         where: {
           id: req.params.id,
           user_id: req.session.user_id,
         },
       });
   
+      console.log(postData);
+
       if (!postData) {
         res.status(404).json({ message: 'No post found with this id!' });
         return;

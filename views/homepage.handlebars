@@ -1,11 +1,13 @@
 {{#each userPosts as |post|}}
-<div class="card">
-    <div class="card-header">
-        <h5>{{post.title}}</h5>
-        <p>Posted by {{post.user.username}} on {{post.date}}</p>
+<a href="/viewpost/{{post.id}}">
+    <div class="card" id="homepage-cards">
+        <div class="card-header">
+            <h5>{{post.title}}</h5>
+            <p>Posted by {{post.user.username}} on {{post.date}}</p>
+        </div>
+        <div class="card-body">
+            <p>{{post.content}}</p>
+        </div>
     </div>
-    <div class="card-body">
-        <p>{{post.content}}</p>
-    </div>
-</div>
+</a>
 {{/each}}

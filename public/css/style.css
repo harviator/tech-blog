@@ -66,6 +66,15 @@ h1 {
     text-align: center;
 }
 
+main > a {
+    text-decoration: none;
+    color: black;
+}
+
+main > a:hover {
+    color: var(--red-salsa);
+}
+
 .card {
     margin: 20px;
     border-color: var(--celadon-blue);
@@ -121,4 +130,8 @@ h1 {
     background-color: var(--platinum);
     border-radius: 5px;
     border: 1px solid var(--celadon-blue);
+}
+
+#homepage-cards:hover {
+    box-shadow: 5px 5px 5px var(--red-salsa) !important;
 }
