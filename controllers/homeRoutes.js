@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get One Post - Comments
-router.get('/viewpost/:id', async (req, res) => {
+router.get('/viewpost/:id', withAuth, async (req, res) => {
   try {
     const userPostData = await Post.findOne({
       where: {
@@ -66,7 +66,7 @@ router.get('/viewpost/:id', async (req, res) => {
 });
 
 //to get the post form when you click the add button
-router.get('/post', async (req, res) => {
+router.get('/post', withAuth, async (req, res) => {
 
   res.render('post', {
     logged_in: true
@@ -74,7 +74,7 @@ router.get('/post', async (req, res) => {
 });
 
 //one to get the edit form 
-router.get('/editpost/:id', async (req, res) => {
+router.get('/editpost/:id', withAuth, async (req, res) => {
   try {
     const userPostData = await Post.findOne({
       where: {
@@ -96,7 +96,7 @@ router.get('/editpost/:id', async (req, res) => {
 });
 
 // Get Dashboard - need with auth
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
     const postsData = await Post.findAll({
       where: {
