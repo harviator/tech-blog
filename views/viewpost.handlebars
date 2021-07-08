@@ -1,3 +1,4 @@
+{{!-- Post --}}
 <div class="card">
     <input type="hidden" id="post-id" value="{{userPostData.id}}">
     <div class="card-header">
@@ -9,11 +10,10 @@
     </div>
 </div>
 
+{{!-- Loop For Comments --}}
 {{#each userPostData.comments as |comment|}}
 <div class="card">
-    {{!-- <input type="hidden" id="comment-id" value="{{userPostData.id}}"> --}}
     <div class="card-header">
-        {{!-- <h5>{{userPostData.comments.title}}</h5> --}}
     </div>
     <div class="card-body">
         <p>{{comment.content}}</p>
@@ -22,11 +22,9 @@
 </div>
 {{/each}}
 
-
+{{!-- Form To Add A Comment --}}
 <div class="card">
-    {{!-- <input type="hidden" id="comment-id" value="{{userPostData.id}}"> --}}
     <div class="card-header">
-        {{!-- <h5>{{userPostData.comments.title}}</h5> --}}
     </div>
     <div class="card-body">
         <div class="form-new-comment">
