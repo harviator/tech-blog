@@ -104,6 +104,7 @@ main > a:hover {
 }
 
 .btn {
+    margin-top: 10px;
     color: var(--platinum);
     border-color: var(--red-salsa);
     background-color: var(--celadon-blue);
@@ -115,7 +116,7 @@ main > a:hover {
 }
 
 #new-post-link {
-    margin: 0 20px 0 20px;
+    margin: 20px 20px 0 20px;
     padding: 10px;
     display: block;
     box-sizing: border-box;

@@ -1,5 +1,3 @@
-console.log('Hello World');
-
 const newCommentFormHandler = async (event) => {
     event.preventDefault();
 

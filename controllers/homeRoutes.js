@@ -29,10 +29,12 @@ router.get('/', async (req, res) => {
 
 // Get One Post - Comments
 router.get('/viewpost/:id', async (req, res) => {
-  //give me all comments where post id equals something include tue user info and tue post info
   try {
     const userPostData = await Post.findOne({
-
+      where: {
+        id: req.params.id,
+      },
+      attributes: ['id', 'title', 'date', 'content', 'user_id'],
       include: [
         {
           model: User,
@@ -40,18 +42,15 @@ router.get('/viewpost/:id', async (req, res) => {
         },
         {
           model: Comment,
-          include: { 
-            model: User 
+          attributes: ['id', 'date', 'content', 'user_id'],
+          include:
+          {
+            model: User,
+            attributes: ['username'],
           }
-
-
-
-        }
+        },
       ],
-      where:{
-        id:req.params.id
-      }
-    });
+    })
 
     const postData = userPostData.get({ plain: true });
 
