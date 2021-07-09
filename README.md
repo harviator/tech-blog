@@ -60,4 +60,4 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 ## Links
 
 Repository: https://github.com/harviator/tech-blog \
-Deployed: https://enigmatic-taiga-76650.herokuapp.com/
+Deployed: https://frozen-thicket-27798.herokuapp.com/
