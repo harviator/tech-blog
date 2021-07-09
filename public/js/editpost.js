@@ -22,17 +22,17 @@ const updatePostFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
-        const id = document.querySelector('#post-id').value;
+    const id = document.querySelector('#post-id').value;
 
-        const response = await fetch(`/api/posts/${id}`, {
-            method: 'DELETE',
-        });
+    const response = await fetch(`/api/posts/${id}`, {
+        method: 'DELETE',
+    });
 
-        if (response.ok) {
-            document.location.replace('/dashboard');
-        } else {
-            alert('Failed to delete project');
-        }
+    if (response.ok) {
+        document.location.replace('/dashboard');
+    } else {
+        alert('Failed to delete project');
+    }
 };
 
 document
