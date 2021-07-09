@@ -65,7 +65,7 @@ router.get('/viewpost/:id', withAuth, async (req, res) => {
   }
 });
 
-//to get the post form when you click the add button
+// Get To Make A Post
 router.get('/post', withAuth, async (req, res) => {
 
   res.render('post', {
@@ -73,7 +73,7 @@ router.get('/post', withAuth, async (req, res) => {
   });
 });
 
-//one to get the edit form 
+//  Get To Edit Post
 router.get('/editpost/:id', withAuth, async (req, res) => {
   try {
     const userPostData = await Post.findOne({
@@ -95,7 +95,7 @@ router.get('/editpost/:id', withAuth, async (req, res) => {
   }
 });
 
-// Get Dashboard - need with auth
+// Get Dashboard
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     const postsData = await Post.findAll({
@@ -103,7 +103,6 @@ router.get('/dashboard', withAuth, async (req, res) => {
         user_id: req.session.user_id
       }
     })
-
 
     const posts = postsData.map(post => post.get({ plain: true }));
     console.log(posts)
@@ -116,6 +115,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
+// Get Login
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/dashboard');
@@ -125,6 +125,7 @@ router.get('/login', (req, res) => {
   res.render('login')
 });
 
+// Get Signup
 router.get('/signup', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/dashboard');
