@@ -2,10 +2,6 @@
 
 # Tech Blog
 
-
-
-# Project 2 - Super Auction Kart
-
 ## Background
 
 This was a project for the UofT Bootcamp.
