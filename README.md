@@ -2,10 +2,6 @@
 
 # Tech Blog
 
-## Background
-
-This was a project for the UofT Bootcamp.
-
 ## Table of Contents
 [Description](#description)\
 [Motivation](#motivation)\
@@ -47,11 +43,10 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 
 ## Process
 
-* For this project we started from scratch.  I looked at the readme example for a wire frame and to see how the data was related so I could build the models.
+* There was an example I used as a wire frame and to see how the data was related so I could build the models.  However the code was from scratch.
 * From there I followed the MVC paradigm to complete the project. 
 * The biggest challenges for this project was the size of the project and keeping track of all the moving peices.  When something broke or a change was made often times there were cascading effects.
 * The successes for this project was getting a better understanding of a full stack application and learning about debugging and fixing my code.
-* Credit to my tutor, TA's, and classmates for their help.
 
 ## Screen Shot
 
